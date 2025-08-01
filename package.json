@@ -1,0 +1,44 @@
+{
+  "name": "eventtier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tier-based event showcase platform built with Next.js, Clerk, and Supabase",
+  "author": {
+    "name": "Aditya Tekale",
+    "email": "aditekale27@gmail.com",
+    "url": "https://github.com/adityatekale27"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adityatekale27/eventtier"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "postinstall": "prisma generate"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.53.0",
+    "next": "14.2.18",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.5",
+    "tailwindcss": "^4",
+    "typescript": "^5.7.2"
+  }
+}
