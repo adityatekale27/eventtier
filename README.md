@@ -9,14 +9,17 @@ A responsive web application that displays events to users based on their subscr
 - **Database**: Supabase (PostgreSQL)
 - **Styling**: Tailwind CSS
 - **Language**: TypeScript
+- **UI Components**: ShadCN/UI
+- **Icons**: Lucide React
 
 ## 📋 Features
 
 - **Tier-based Authentication**: Users can only view events for their tier or below
 - **Responsive Design**: Mobile-friendly interface with clean UI
 - **Event Management**: Admin panel for creating and managing events
-- **Real-time Updates**: Live event data synchronization
 - **User Dashboard**: Personalized event recommendations
+- **Loading States**: Skeleton animations for better UX
+- **Security Headers**: Production-ready security configuration
 
 ## 🎯 User Tiers
 
@@ -39,32 +42,56 @@ A responsive web application that displays events to users based on their subscr
    ```
 
 3. **Environment Setup**
-   Create a `.env.local` file with:
+   Create your environment file from the template:
+
    ```env
+   cp .env.example .env
+   ```
+
+   Then update `.env` with your actual credentials:
+
+   ```env
+   NODE_ENV=development
    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
    CLERK_SECRET_KEY=your_clerk_secret
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
    ```
 
-4. **Run the development server**
+4. **Database Setup**
+
+Set up your Supabase database:
+1. Create a new project at [Supabase](https://app.supabase.com)
+2. Run the SQL schema from `database/schema.sql` in your Supabase SQL editor
+3. Seed the database with sample events from `database/seed.sql`
+
+5. **Clerk Configuration**
+
+1. Go to [Clerk Dashboard](https://dashboard.clerk.dev)
+2. Create a new application
+3. Configure user metadata to include `tier` field
+4. Set up demo users with different tier levels
+
+6. **Run the development server**
    ```bash
    npm run dev
    ```
 
-5. **Open** [http://localhost:3000](http://localhost:3000)
+7. **Open the application** 
+Visit [http://localhost:3000](http://localhost:3000)
 
 ## 🎪 Demo Credentials
 
-- **Free User**: `free@demo.com` / `freedemo`
-- **Silver User**: `silver@demo.com` / `silverdemo`
-- **Gold User**: `gold@demo.com` / `golddemo`
-- **Platinum User**: `platinum@demo.com` / `platinumdemo`
-- **Admin**: `admin@demo.com` / `admindemo`
+- **Free User**: `free@eventtier.demo` / `demo123`
+- **Silver User**: `silver@eventtier.demo` / `demo123`  
+- **Gold User**: `gold@eventtier.demo` / `demo123`
+- **Platinum User**: `platinum@eventtier.demo` / `demo123`
+- **Admin**: `admin@eventtier.demo` / `demo123`
 
 ## 🚀 Deployment
 
-Deployed on Vercel: [Live Demo]*upcoming...*
+- **Production URL**: [https://eventtier.vercel.app](https://eventtier.vercel.app)
+- **Status**: Inactive
 
 ## 👨💻 Developer
 

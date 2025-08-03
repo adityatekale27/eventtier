@@ -38,4 +38,24 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+.next/tsconfig.tsbuildinfo
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk

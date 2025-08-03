@@ -1,0 +1,46 @@
+{
+  "name": "EventTier - Tier-Based Event Showcase Platform",
+  "short_name": "EventTier",
+  "description": "Discover exclusive events tailored to your membership tier. From free community gatherings to premium VIP experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["entertainment", "events", "lifestyle"],
+  
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+eventtier",
+      "url": "/event/%s"
+    }
+  ]
+}
